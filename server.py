@@ -1,6 +1,4 @@
-from types import MethodDescriptorType
-from flask import Flask, render_template, request, redirect, session
-from flask.helpers import url_for
+from flask import Flask, render_template, request, session
 app = Flask(__name__)
 app.secret_key = "1234567890"
 
