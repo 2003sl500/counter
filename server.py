@@ -18,19 +18,16 @@ def index():
 @app.route('/destroy_session', methods = ['POST'])
 def destroy_session():
     session.clear()
-    result = 0
     return redirect('/')
 
 @app.route('/counter', methods = ['POST'])
 def counter():
     session['count'] += int(1)
-    result =  session['count']
     return redirect("/")
 
 @app.route('/reset', methods = ['POST'])
 def reset():
     session['count'] = 0
-    result = session['count']
     return redirect('/')
 
 
